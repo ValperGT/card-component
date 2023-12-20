@@ -1,3 +1,17 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Variables */
 :root {
     --cream: hsl(30, 38%, 92%);
     --dark-cyan: hsl(158, 36%, 37%);
@@ -7,6 +21,7 @@
     --white: hsl(0, 0%, 100%);
 }
 
+/* Fonts */
 @font-face {
     font-family: "Fraunces";
     src: url("../fonts/Fraunces_144pt-Bold.ttf");
@@ -25,18 +40,7 @@
     font-weight: 700;
 }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-img {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-
+/* Styles */
 body {
     background-color: var(--cream);
     color: var(--dark-grayish-blue);
