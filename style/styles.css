@@ -1,0 +1,153 @@
+:root {
+    --cream: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --text-size: 14px;
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url("../fonts/Fraunces_144pt-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--dark-grayish-blue);
+    font-family: "Montserrat", sans-serif;
+    font-size: var(--text-size);
+}
+
+.card-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100dvh;
+}
+
+.card {
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    margin: 20px;
+    max-width: 570px;
+}
+
+.img-container {
+    width: 50%;
+}
+
+.card-details {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+    padding: 2em;
+    width: 50%;
+}
+
+.perfume-label {
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.perfume-title {
+    color: var(--very-dark-blue);
+    font-family: "Fraunces", serif;
+    font-size: 2.6em;
+    line-height: 1;
+}
+
+.perfume-paragraph {
+    color: var(--dark-grayish-blue);
+    line-height: 1.5;
+}
+
+.perfume-price {
+    display: flex;
+    align-items: center;
+    column-gap: 1.4em;
+}
+
+.price-now {
+    color: var(--dark-cyan);
+    font-family: "Fraunces", serif;
+    font-size: 2em;
+}
+
+.price-before {
+    text-decoration: line-through;
+}
+
+.button {
+    align-items: center;
+    background-color: var(--dark-cyan);
+    border-radius: 8px;
+    border: 0;
+    color: var(--white);
+    column-gap: .6em;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 14px;
+    transition: background-color 150ms ease-in-out;
+    width: 100%;
+    -webkit-transition: background-color 150ms ease-in-out;
+    -moz-transition: background-color 150ms ease-in-out;
+    -ms-transition: background-color 150ms ease-in-out;
+    -o-transition: background-color 150ms ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--very-dark-blue);
+}
+
+.button-icon {
+    height: 16px;
+    width: 16px;
+}
+
+.button-text {
+    color: var(--white);
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 550px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .img-container,
+    .card-details {
+        width: 100%;
+    }
+}
